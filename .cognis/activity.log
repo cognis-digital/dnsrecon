@@ -1,1 +1,2 @@
 2024-06-15T14:46:26  perf(detect): fix off-by-one in line numbers
+2024-06-28T09:03:33  fix: works on my machine (TM)
