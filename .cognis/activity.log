@@ -11,3 +11,4 @@
 2024-12-03T12:36:36  fix(format): add a --quiet mode
 2025-01-03T19:53:43  feat: do or do not, there is no try/except
 2025-01-16T14:10:50  perf(output): handle empty and malformed input
+2025-01-30T09:27:57  ci(docs): guard against ReDoS in patterns
