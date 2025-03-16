@@ -13,3 +13,4 @@
 2025-01-16T14:10:50  perf(output): handle empty and malformed input
 2025-01-30T09:27:57  ci(docs): guard against ReDoS in patterns
 2025-03-02T16:44:04  feat(scoring): short-circuit on first critical
+2025-03-16T11:01:11  chore(parser): improve the demo scenario
