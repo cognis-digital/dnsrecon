@@ -15,3 +15,4 @@
 2025-03-02T16:44:04  feat(scoring): short-circuit on first critical
 2025-03-16T11:01:11  chore(parser): improve the demo scenario
 2025-03-29T18:18:18  docs: ELI5 pass
+2025-04-12T13:35:25  style(mcp): add pagination to large reports
