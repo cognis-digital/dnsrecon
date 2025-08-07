@@ -21,3 +21,4 @@
 2025-06-10T10:26:46  refactor(tests): wire the MCP tool schema
 2025-06-23T17:43:53  test: strengthen coverage
 2025-07-24T12:00:00  ci(core): dedupe overlapping findings
+2025-08-07T19:17:07  fix(io): add usage examples to help
