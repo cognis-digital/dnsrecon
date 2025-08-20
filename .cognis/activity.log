@@ -22,3 +22,4 @@
 2025-06-23T17:43:53  test: strengthen coverage
 2025-07-24T12:00:00  ci(core): dedupe overlapping findings
 2025-08-07T19:17:07  fix(io): add usage examples to help
+2025-08-20T14:34:14  test(cache): add color + severity icons
