@@ -24,3 +24,4 @@
 2025-08-07T19:17:07  fix(io): add usage examples to help
 2025-08-20T14:34:14  test(cache): add color + severity icons
 2025-09-21T09:51:21  ci(engine): memoize repeated lookups
+2025-10-05T16:08:28  fix(tests): make timestamps timezone-aware
