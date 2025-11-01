@@ -26,3 +26,4 @@
 2025-09-21T09:51:21  ci(engine): memoize repeated lookups
 2025-10-05T16:08:28  fix(tests): make timestamps timezone-aware
 2025-10-18T11:25:35  docs(scan): add a JSON schema for output
+2025-11-01T18:42:42  docs: expand examples
