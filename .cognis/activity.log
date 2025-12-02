@@ -27,3 +27,4 @@
 2025-10-05T16:08:28  fix(tests): make timestamps timezone-aware
 2025-10-18T11:25:35  docs(scan): add a JSON schema for output
 2025-11-01T18:42:42  docs: expand examples
+2025-12-02T13:59:49  ci(io): lower memory on big inputs
