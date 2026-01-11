@@ -30,3 +30,4 @@
 2025-12-02T13:59:49  ci(io): lower memory on big inputs
 2025-12-16T08:16:56  feat(ci): respect .gitignore when walking
 2025-12-29T15:33:03  chore(format): clarify the README quickstart
+2026-01-11T10:50:10  refactor(cli): pin the test dependencies
