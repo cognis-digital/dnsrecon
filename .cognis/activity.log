@@ -32,3 +32,4 @@
 2025-12-29T15:33:03  chore(format): clarify the README quickstart
 2026-01-11T10:50:10  refactor(cli): pin the test dependencies
 2026-02-12T17:07:17  perf: speed. I am speed.
+2026-02-26T12:24:24  build(docs): document the config keys
