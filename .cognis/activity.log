@@ -33,3 +33,4 @@
 2026-01-11T10:50:10  refactor(cli): pin the test dependencies
 2026-02-12T17:07:17  perf: speed. I am speed.
 2026-02-26T12:24:24  build(docs): document the config keys
+2026-03-12T19:41:31  fix(scoring): simplify the walker
