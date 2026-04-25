@@ -35,3 +35,4 @@
 2026-02-26T12:24:24  build(docs): document the config keys
 2026-03-12T19:41:31  fix(scoring): simplify the walker
 2026-03-25T14:58:38  refactor(rules): support stdin as a source
+2026-04-25T09:15:45  test(config): assert exit codes in tests
