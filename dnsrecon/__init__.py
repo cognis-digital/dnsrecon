@@ -1,32 +1,11 @@
-"""DNSRECON - defensive DNS reconnaissance aggregator.
-
-Analysis/triage/detection only. Parses DNS record data you already
-collected (or supply) and surfaces attack-surface hints: dangling
-CNAMEs / subdomain-takeover candidates, missing email-auth records
-(SPF/DMARC/DKIM-policy), zone-transfer exposure hints, wildcard hints,
-and weak/legacy record signals. No active scanning, no exploitation.
-"""
-from .core import (
-    Finding,
-    Severity,
-    analyze_records,
-    load_records,
-    parse_records,
-    summarize,
-    TAKEOVER_FINGERPRINTS,
-)
-
-TOOL_NAME = "dnsrecon"
-TOOL_VERSION = "1.0.0"
-
-__all__ = [
-    "Finding",
-    "Severity",
-    "analyze_records",
-    "load_records",
-    "parse_records",
-    "summarize",
-    "TAKEOVER_FINGERPRINTS",
-    "TOOL_NAME",
-    "TOOL_VERSION",
-]
+"""dnsrecon — part of the Cognis Neural Suite."""
+try:  # re-export the tool's public API + identity from core
+    from dnsrecon.core import *  # noqa: F401,F403
+except Exception:  # pragma: no cover
+    pass
+try:
+    from dnsrecon.core import TOOL_NAME, TOOL_VERSION
+except Exception:  # pragma: no cover
+    TOOL_NAME = "dnsrecon"
+    TOOL_VERSION = "0.1.0"
+__version__ = TOOL_VERSION
