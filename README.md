@@ -16,7 +16,7 @@
 </div>
 
 ```bash
-pip install cognis-dnsrecon
+pip install "git+https://github.com/cognis-digital/dnsrecon.git"
 dnsrecon scan .            # → prioritized findings in seconds
 ```
 
@@ -49,7 +49,7 @@ DNS attack surface
 ## Quick start
 
 ```bash
-pip install cognis-dnsrecon
+pip install "git+https://github.com/cognis-digital/dnsrecon.git"
 dnsrecon --version
 dnsrecon scan .                       # scan current project
 dnsrecon scan . --format json         # machine-readable
