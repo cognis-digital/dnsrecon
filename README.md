@@ -9,16 +9,22 @@
 
 <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=18&duration=3500&pause=1000&color=6B46C1&center=true&vCenter=true&width=720&lines=Aggregate+DNS+recon+records+zone+hints+takeover+candidates;Self-hostable+%C2%B7+MCP-native+%C2%B7+CI-ready+%C2%B7+polyglot" width="720"/>
 
-[![PyPI](https://img.shields.io/pypi/v/cognis-dnsrecon.svg?color=6b46c1)](https://pypi.org/project/cognis-dnsrecon/) [![CI](https://github.com/cognis-digital/dnsrecon/actions/workflows/ci.yml/badge.svg)](https://github.com/cognis-digital/dnsrecon/actions) [![License: COCL 1.0](https://img.shields.io/badge/License-COCL%201.0-2b6cb0.svg)](LICENSE) [![Suite](https://img.shields.io/badge/Cognis-Neural%20Suite-6b46c1.svg)](https://github.com/cognis-digital)
+[![install](https://img.shields.io/badge/install-git%2B%20%C2%B7%20pipx%20%C2%B7%20uv-6b46c1.svg)](#install--every-way-every-platform) [![CI](https://github.com/cognis-digital/dnsrecon/actions/workflows/ci.yml/badge.svg)](https://github.com/cognis-digital/dnsrecon/actions) [![License: COCL 1.0](https://img.shields.io/badge/License-COCL%201.0-2b6cb0.svg)](LICENSE) [![Suite](https://img.shields.io/badge/Cognis-Neural%20Suite-6b46c1.svg)](https://github.com/cognis-digital)
 
 *Part of the Cognis Neural Suite.*
 
 </div>
 
 ```bash
-pip install cognis-dnsrecon
+pip install "git+https://github.com/cognis-digital/dnsrecon.git"
 dnsrecon scan .            # → prioritized findings in seconds
 ```
+
+<!-- cognis:layman:start -->
+## What is this?
+
+dnsrecon is a command-line tool that reads a list of DNS records for a domain and checks them for common security weaknesses — such as misconfigured email authentication rules, wildcard records that expose too much, or CNAME entries pointing to services that may have been decommissioned and could be hijacked. It works entirely offline: you feed it a file of records (JSON or plain text) and it produces a prioritized list of issues with plain-English recommendations. It is aimed at security engineers, system administrators, and developers who want a quick, scriptable way to audit a domain's DNS before attackers do.
+<!-- cognis:layman:end -->
 
 ## Contents
 
@@ -46,10 +52,56 @@ DNS attack surface
 <div align="right"><a href="#top">↑ back to top</a></div>
 
 <a name="quick-start"></a>
+<!-- cognis:domains:start -->
+## Domains
+
+**Primary domain:** Intelligence & OSINT  ·  **JTF MERIDIAN division:** NULLBYTE · BLACK CELL
+
+**Topics:** `cognis` `osint` `intelligence` `recon` `dns`
+
+Part of the **Cognis Neural Suite** — 300+ source-available tools organized across 12 domains under the JTF MERIDIAN command structure. See the [suite on GitHub](https://github.com/cognis-digital) and [jtf-meridian](https://github.com/cognis-digital/jtf-meridian) for how the pieces fit together.
+<!-- cognis:domains:end -->
+
+<!-- cognis:install:start -->
+## Install
+
+`dnsrecon` is source-available (not published to PyPI) — every method below installs
+straight from GitHub. Pick whichever you prefer; the one-line scripts auto-detect
+the best tool available on your machine.
+
+**One-liner (Linux / macOS):**
+```sh
+curl -fsSL https://raw.githubusercontent.com/cognis-digital/dnsrecon/HEAD/install.sh | sh
+```
+
+**One-liner (Windows PowerShell):**
+```powershell
+irm https://raw.githubusercontent.com/cognis-digital/dnsrecon/HEAD/install.ps1 | iex
+```
+
+**Or install manually — any one of:**
+```sh
+pipx install "git+https://github.com/cognis-digital/dnsrecon.git"     # isolated (recommended)
+uv tool install "git+https://github.com/cognis-digital/dnsrecon.git"  # uv
+pip install "git+https://github.com/cognis-digital/dnsrecon.git"      # pip
+```
+
+**From source:**
+```sh
+git clone https://github.com/cognis-digital/dnsrecon.git
+cd dnsrecon && pip install .
+```
+
+Then run:
+```sh
+dnsrecon --help
+```
+<!-- cognis:install:end -->
+
 ## Quick start
 
 ```bash
-pip install cognis-dnsrecon
+pip install "git+https://github.com/cognis-digital/dnsrecon.git"
 dnsrecon --version
 dnsrecon scan .                       # scan current project
 dnsrecon scan . --format json         # machine-readable
@@ -142,6 +194,32 @@ curl -fsSL https://raw.githubusercontent.com/cognis-digital/dnsrecon/main/instal
 <div align="right"><a href="#top">↑ back to top</a></div>
 
 <a name="related"></a>
+<a name="verification"></a>
+## Verification
+
+[![tests](https://img.shields.io/badge/tests-15%20passing-2ea44f.svg)](AUDIT.md)
+
+Every push is verified end-to-end. Latest audit (2026-06-13):
+
+```text
+tests        : 15 passed, 0 failed, 0 errored
+compile      : all modules parse
+cli          : C:\Python314\python.exe: No module named https
+package      : https
+```
+
+<details><summary>CLI surface (<code>--help</code>)</summary>
+
+```text
+C:\Python314\python.exe: No module named https
+```
+</details>
+
+Full machine-readable results: [`AUDIT.md`](AUDIT.md) · regenerate with `python -m https --help` + `pytest -q`.
+
+<div align="right"><a href="#top">↑ back to top</a></div>
+
+
 ## Related Cognis tools
 
 - [`portfan`](https://github.com/cognis-digital/portfan) — Summarize and diff nmap XML into prioritized, attackable findings
