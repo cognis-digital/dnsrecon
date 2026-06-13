@@ -20,6 +20,12 @@ pip install "git+https://github.com/cognis-digital/dnsrecon.git"
 dnsrecon scan .            # → prioritized findings in seconds
 ```
 
+<!-- cognis:layman:start -->
+## What is this?
+
+dnsrecon is a command-line tool that reads a list of DNS records for a domain and checks them for common security weaknesses — such as misconfigured email authentication rules, wildcard records that expose too much, or CNAME entries pointing to services that may have been decommissioned and could be hijacked. It works entirely offline: you feed it a file of records (JSON or plain text) and it produces a prioritized list of issues with plain-English recommendations. It is aimed at security engineers, system administrators, and developers who want a quick, scriptable way to audit a domain's DNS before attackers do.
+<!-- cognis:layman:end -->
+
 ## Contents
 
 - [Why dnsrecon?](#why) · [Features](#features) · [Quick start](#quick-start) · [Example](#example) · [Architecture](#architecture) · [AI stack](#ai-stack) · [How it compares](#how-it-compares) · [Integrations](#integrations) · [Install anywhere](#install-anywhere) · [Related](#related) · [Contributing](#contributing)
@@ -46,6 +52,42 @@ DNS attack surface
 <div align="right"><a href="#top">↑ back to top</a></div>
 
 <a name="quick-start"></a>
+<!-- cognis:install:start -->
+## Install
+
+`dnsrecon` is source-available (not published to PyPI) — every method below installs
+straight from GitHub. Pick whichever you prefer; the one-line scripts auto-detect
+the best tool available on your machine.
+
+**One-liner (Linux / macOS):**
+```sh
+curl -fsSL https://raw.githubusercontent.com/cognis-digital/dnsrecon/HEAD/install.sh | sh
+```
+
+**One-liner (Windows PowerShell):**
+```powershell
+irm https://raw.githubusercontent.com/cognis-digital/dnsrecon/HEAD/install.ps1 | iex
+```
+
+**Or install manually — any one of:**
+```sh
+pipx install "git+https://github.com/cognis-digital/dnsrecon.git"     # isolated (recommended)
+uv tool install "git+https://github.com/cognis-digital/dnsrecon.git"  # uv
+pip install "git+https://github.com/cognis-digital/dnsrecon.git"      # pip
+```
+
+**From source:**
+```sh
+git clone https://github.com/cognis-digital/dnsrecon.git
+cd dnsrecon && pip install .
+```
+
+Then run:
+```sh
+dnsrecon --help
+```
+<!-- cognis:install:end -->
+
 ## Quick start
 
 ```bash
